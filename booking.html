@@ -1,0 +1,848 @@
+<!doctype html>
+<html lang="sr-Latn">
+  <head>
+    <script src="js/theme.js?v=20261114-theme"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Demonstracioni obrazac za zakazivanje u izmišljenom konceptu ordinacije SmileCraft Dental."
+      data-i18n-attr="content:site.bookingDescription"
+    />
+    <title data-i18n="site.bookingTitle">
+      Zakažite pregled | SmileCraft Dental
+    </title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="css/style.css?v=20261114-navigation" />
+    <link rel="stylesheet" href="css/responsive.css?v=20261114-navigation" />
+    <link rel="stylesheet" href="css/language-picker.css" />
+    <link rel="stylesheet" href="css/theme.css?v=20261114-theme" />
+    <link rel="stylesheet" href="css/booking.css?v=20261122-booking-wizard-11" />
+    <link rel="stylesheet" href="css/chatbot.css?v=20261122-faq" />
+    <script src="js/config.js" defer></script>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/main.js?v=20261020-site-polish" defer></script>
+    <script src="js/chatbot.js?v=20261122-faq" defer></script>
+    <script src="js/booking.js?v=20261122-booking-wizard-5" defer></script>
+  </head>
+  <body class="booking-page">
+    <div class="booking-app">
+      <header class="site-header">
+        <div class="container header-inner">
+          <a
+            class="brand"
+            href="index.html"
+            aria-label="Početna stranica ordinacije SmileCraft Dental"
+            data-i18n-attr="aria-label:site.accessibility.homeLink"
+            ><span class="brand-mark" aria-hidden="true"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+              >
+                <path
+                  d="M7 3.8c2.2 0 3.1 1 5 1s2.8-1 5-1c2.6 0 4.2 2.3 3.6 5.2-.6 2.7-1.8 4.3-2.5 7-.6 2.4-1.4 4.5-2.9 4.5-1.7 0-1.2-4.5-3.2-4.5s-1.5 4.5-3.2 4.5c-1.5 0-2.3-2.1-2.9-4.5-.7-2.7-1.9-4.3-2.5-7C3 6.1 4.4 3.8 7 3.8Z"
+                /></svg></span
+            ><span data-clinic-name>SmileCraft Dental</span></a
+          ><button
+            class="menu-toggle"
+            type="button"
+            aria-label="Otvori navigaciju"
+            data-i18n-attr="aria-label:site.accessibility.openMenu"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+          >
+            <span></span>
+          </button>
+          <nav
+            class="site-nav"
+            id="primary-navigation"
+            aria-label="Glavna navigacija"
+            data-i18n-attr="aria-label:site.accessibility.mainNavigation"
+          >
+            <a href="index.html"
+              ><span data-i18n="site.nav.home">Početna</span></a
+            ><a href="services.html"
+              ><span data-i18n="site.nav.services">Usluge</span></a
+            ><a href="about.html"
+              ><span data-i18n="site.nav.about">O ordinaciji</span></a
+            ><a href="contact.html"
+              ><span data-i18n="site.nav.contact">Kontakt</span></a
+            ><a class="button" href="booking.html" aria-current="page"
+              ><span data-i18n="site.nav.booking">Zakažite pregled</span>
+              <span aria-hidden="true">↗</span></a
+            >
+          </nav>
+        </div>
+      </header>
+      <main>
+        <section class="booking-hero">
+          <div class="container booking-hero__inner">
+            <p class="eyebrow">
+              <span data-i18n="booking.ui.heroEyebrow"
+                >SMILECRAFT DENTAL / PREGLEDI</span
+              >
+            </p>
+            <h1 data-i18n="booking.ui.heroTitle">Zakažite pregled</h1>
+            <p class="lead" data-i18n="booking.ui.heroIntro">
+              Izaberite uslugu i odgovarajući termin, a zatim unesite svoje
+              podatke.
+            </p>
+            <p
+              class="booking-demo-note"
+              role="note"
+              data-i18n="booking.ui.demoNote"
+            >
+              Ovo je demonstracioni obrazac za izmišljeni koncept ordinacije.
+              Nemojte unositi stvarne lične podatke; zahtev ne predstavlja
+              zakazivanje kod stvarnog stomatologa.
+            </p>
+          </div>
+        </section>
+
+        <section class="section booking-section">
+          <div class="container booking-shell">
+            <form id="booking-form" class="booking-form" novalidate>
+              <ol
+                class="booking-steps"
+                aria-label="Tok zakazivanja"
+                data-i18n-attr="aria-label:booking.ui.flowLabel"
+              >
+                <li data-booking-step="1" aria-current="step">
+                  <span>01</span>
+                  <div>
+                    <strong data-i18n="booking.ui.serviceStep">Usluga</strong
+                    ><small data-i18n="booking.ui.chooseService"
+                      >Izaberite uslugu</small
+                    >
+                  </div>
+                </li>
+                <li data-booking-step="2">
+                  <span>02</span>
+                  <div>
+                    <strong data-i18n="booking.ui.appointmentStep"
+                      >Termin</strong
+                    ><small data-i18n="booking.ui.findTime"
+                      >Pronađite odgovarajući termin</small
+                    >
+                  </div>
+                </li>
+                <li data-booking-step="3">
+                  <span>03</span>
+                  <div>
+                    <strong data-i18n="booking.ui.detailsStep">Podaci</strong
+                    ><small data-i18n="booking.ui.sendRequest">Pošaljite zahtev</small>
+                  </div>
+                </li>
+              </ol>
+
+              <div class="booking-layout" data-booking-layout data-current-step="1">
+                <div class="booking-card booking-card--appointment">
+                  <section
+                    class="booking-step"
+                    data-booking-panel="1"
+                    aria-labelledby="appointment-step-title"
+                  >
+                    <header class="booking-step__heading">
+                      <div>
+                        <h2
+                          id="appointment-step-title"
+                          tabindex="-1"
+                          data-i18n="booking.ui.chooseAppointment"
+                        >
+                          Izaberite pregled
+                        </h2>
+                        <p data-i18n="booking.ui.clinicServiceHint">
+                          Izaberite ordinaciju i uslugu da biste videli dostupne
+                          termine.
+                        </p>
+                      </div>
+                    </header>
+
+                    <div class="booking-selects">
+                      <div class="field" id="clinic-field">
+                        <label
+                          for="clinic_id"
+                          data-i18n="booking.ui.clinicLabel"
+                          >Ordinacija</label
+                        >
+                        <select id="clinic_id" name="clinic_id" required>
+                          <option value="" data-i18n="booking.ui.loadingClinic">
+                            Učitavanje ordinacije...
+                          </option>
+                        </select>
+                        <div
+                          class="field-error"
+                          data-error-for="clinic_id"
+                          aria-live="polite"
+                        ></div>
+                      </div>
+
+                      <div class="field booking-service-field">
+                        <label
+                          id="service-label"
+                          for="service-picker-trigger"
+                          data-i18n="booking.ui.serviceLabel"
+                          >Stomatološka usluga</label
+                        >
+                        <select
+                          id="service_id"
+                          name="service_id"
+                          required
+                          disabled
+                          class="service-picker-native"
+                          aria-hidden="true"
+                          tabindex="-1"
+                        >
+                          <option
+                            value=""
+                            data-i18n="booking.ui.loadingServices"
+                          >
+                            Učitavanje usluga...
+                          </option>
+                        </select>
+                        <div class="service-picker" id="service-picker">
+                          <button
+                            class="service-picker-trigger"
+                            id="service-picker-trigger"
+                            type="button"
+                            aria-haspopup="listbox"
+                            aria-expanded="false"
+                            aria-controls="service-picker-options"
+                            aria-labelledby="service-label service-selected-name"
+                            disabled
+                          >
+                            <span class="service-picker-trigger__icon" aria-hidden="true">✦</span>
+                            <span class="service-picker-trigger__copy">
+                              <small id="service-selected-category" hidden></small>
+                              <strong id="service-selected-name" data-i18n="booking.ui.serviceOption">Izaberite uslugu</strong>
+                            </span>
+                            <span class="service-picker-trigger__duration" id="service-selected-duration" hidden></span>
+                            <span class="service-picker-trigger__chevron" aria-hidden="true">⌄</span>
+                          </button>
+                          <div class="service-picker-panel" id="service-picker-panel" hidden>
+                            <label class="service-search" for="booking-service-search">
+                              <span aria-hidden="true">⌕</span>
+                              <input
+                                id="booking-service-search"
+                                type="search"
+                                autocomplete="off"
+                                placeholder="Pretražite usluge"
+                                data-i18n-attr="placeholder:booking.ui.serviceSearchPlaceholder"
+                              />
+                            </label>
+                            <div
+                              class="service-picker-options"
+                              id="service-picker-options"
+                              role="listbox"
+                              aria-labelledby="service-label"
+                            ></div>
+                          </div>
+                        </div>
+                        <p
+                          class="service-duration"
+                          id="service-duration"
+                          aria-live="polite"
+                          data-i18n="booking.ui.durationAfterService"
+                        >
+                          Trajanje će biti prikazano nakon izbora usluge.
+                        </p>
+                        <div
+                          class="field-error"
+                          data-error-for="service_id"
+                          aria-live="polite"
+                        ></div>
+                      </div>
+                    </div>
+                    <div class="booking-step-actions">
+                      <button
+                        type="button"
+                        class="button booking-next"
+                        data-booking-next="2"
+                      >
+                        <span data-i18n="booking.ui.continue">Nastavi</span>
+                        <span aria-hidden="true">→</span>
+                      </button>
+                    </div>
+                  </section>
+
+                  <section
+                    class="booking-step booking-step--calendar"
+                    data-booking-panel="2"
+                    aria-labelledby="date-step-title"
+                    hidden
+                  >
+                    <header class="booking-step__heading">
+                      <div>
+                        <h2
+                          id="date-step-title"
+                          tabindex="-1"
+                          data-i18n="booking.ui.dateTimeTitle"
+                        >
+                          Izaberite datum i vreme
+                        </h2>
+                        <p data-i18n="booking.ui.availableDatesHint">
+                          Dostupni dani su označeni. Izaberite dan da biste
+                          videli slobodne termine.
+                        </p>
+                      </div>
+                    </header>
+
+                    <div class="booking-date-time-layout">
+                      <div class="field">
+                      <span
+                        class="field-label"
+                        id="appointment-date-label"
+                        data-i18n="booking.ui.appointmentDate"
+                        >Datum pregleda</span
+                      >
+                      <input
+                        id="appointment_date"
+                        name="appointment_date"
+                        type="hidden"
+                        required
+                      />
+                      <div
+                        class="booking-calendar"
+                        aria-labelledby="appointment-date-label"
+                      >
+                        <div class="calendar-header">
+                          <button
+                            class="calendar-nav"
+                            id="calendar-previous"
+                            type="button"
+                            aria-label="Prethodni mesec"
+                            data-i18n-attr="aria-label:booking.ui.previousMonth"
+                          >
+                            ‹
+                          </button>
+                          <h3 id="calendar-month" aria-live="polite"></h3>
+                          <button
+                            class="calendar-nav"
+                            id="calendar-next"
+                            type="button"
+                            aria-label="Sledeći mesec"
+                            data-i18n-attr="aria-label:booking.ui.nextMonth"
+                          >
+                            ›
+                          </button>
+                        </div>
+                        <div class="calendar-weekdays" aria-hidden="true">
+                          <span data-i18n="booking.ui.weekdayMon">Pon</span
+                          ><span data-i18n="booking.ui.weekdayTue">Uto</span
+                          ><span data-i18n="booking.ui.weekdayWed">Sre</span
+                          ><span data-i18n="booking.ui.weekdayThu">Čet</span
+                          ><span data-i18n="booking.ui.weekdayFri">Pet</span
+                          ><span data-i18n="booking.ui.weekdaySat">Sub</span
+                          ><span data-i18n="booking.ui.weekdaySun">Ned</span>
+                        </div>
+                        <div
+                          id="booking-calendar-grid"
+                          class="calendar-grid"
+                          role="group"
+                          aria-label="Dostupni datumi pregleda"
+                          data-i18n-attr="aria-label:booking.ui.availableDates"
+                        ></div>
+                        <p
+                          id="calendar-status"
+                          class="calendar-status"
+                          role="status"
+                          aria-live="polite"
+                          data-i18n="booking.ui.calendarInitial"
+                        >
+                          Izaberite ordinaciju i uslugu da biste proverili
+                          dostupne datume.
+                        </p>
+                        <div
+                          class="calendar-legend"
+                          aria-label="Legenda kalendara"
+                          data-i18n-attr="aria-label:booking.ui.calendarLegend"
+                        >
+                          <span
+                            ><i
+                              class="legend-dot legend-dot--available"
+                              aria-hidden="true"
+                            ></i>
+                            <span data-i18n="booking.ui.available"
+                              >Dostupno</span
+                            ></span
+                          >
+                          <span
+                            ><i
+                              class="legend-dot legend-dot--unavailable"
+                              aria-hidden="true"
+                            ></i>
+                            <span data-i18n="booking.ui.unavailable"
+                              >Nedostupno</span
+                            ></span
+                          >
+                          <span
+                            ><i
+                              class="legend-dot legend-dot--today"
+                              aria-hidden="true"
+                            ></i>
+                            <span data-i18n="booking.ui.todayLabel"
+                              >Danas</span
+                            ></span
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="field-error"
+                        data-error-for="appointment_date"
+                        aria-live="polite"
+                      ></div>
+                    </div>
+
+                      <div class="field time-field">
+                      <span class="field-label" data-i18n="booking.ui.timeSlots"
+                        >Slobodni termini</span
+                      >
+                      <div
+                        id="time-slot-picker"
+                        class="time-slot-picker"
+                        role="group"
+                        aria-label="Slobodni termini"
+                        aria-live="polite"
+                        data-i18n-attr="aria-label:booking.ui.timeSlots"
+                      >
+                        <p
+                          class="time-slot-empty"
+                          data-i18n="booking.ui.chooseDateForSlots"
+                        >
+                          Izaberite dostupan datum da biste videli termine.
+                        </p>
+                      </div>
+                      <input
+                        id="appointment_time"
+                        name="appointment_time"
+                        type="hidden"
+                        value=""
+                      />
+                      <div
+                        class="field-error"
+                        data-error-for="appointment_time"
+                        aria-live="polite"
+                      ></div>
+                      </div>
+                    </div>
+                    <div class="booking-step-actions booking-step-actions--split">
+                      <button
+                        type="button"
+                        class="button button--outline booking-back"
+                        data-booking-back="1"
+                      >
+                        <span aria-hidden="true">←</span>
+                        <span data-i18n="booking.ui.back">Nazad</span>
+                      </button>
+                      <button
+                        type="button"
+                        class="button booking-next"
+                        data-booking-next="3"
+                      >
+                        <span data-i18n="booking.ui.continue">Nastavi</span>
+                        <span aria-hidden="true">→</span>
+                      </button>
+                    </div>
+                  </section>
+                </div>
+
+                <div class="booking-details-column">
+                  <section
+                    class="booking-card booking-step booking-step--details"
+                    data-booking-panel="3"
+                    aria-labelledby="details-step-title"
+                    hidden
+                  >
+                    <header class="booking-step__heading">
+                      <div>
+                        <h2
+                          id="details-step-title"
+                          tabindex="-1"
+                          data-i18n="booking.ui.yourDetails"
+                        >
+                          Vaši podaci
+                        </h2>
+                        <p data-i18n="booking.ui.detailsHint">
+                          Ove podatke ćemo koristiti da bismo vam odgovorili u
+                          vezi sa zahtevom.
+                        </p>
+                      </div>
+                    </header>
+
+                    <div class="patient-fields">
+                      <div class="field">
+                        <label
+                          for="patient_name"
+                          data-i18n="booking.ui.fullName"
+                          >Ime i prezime</label
+                        >
+                        <input
+                          id="patient_name"
+                          name="patient_name"
+                          type="text"
+                          autocomplete="name"
+                          maxlength="190"
+                          placeholder="Unesite ime i prezime"
+                          data-i18n-attr="placeholder:booking.ui.fullNamePlaceholder"
+                          required
+                        />
+                        <div
+                          class="field-error"
+                          data-error-for="patient_name"
+                          aria-live="polite"
+                        ></div>
+                      </div>
+
+                      <div class="field">
+                        <label
+                          for="patient_email"
+                          data-i18n="booking.ui.emailAddress"
+                          >Imejl adresa</label
+                        >
+                        <input
+                          id="patient_email"
+                          name="patient_email"
+                          type="email"
+                          autocomplete="email"
+                          maxlength="190"
+                          placeholder="ime@primer.rs"
+                          data-i18n-attr="placeholder:booking.ui.emailPlaceholder"
+                          required
+                        />
+                        <div
+                          class="field-error"
+                          data-error-for="patient_email"
+                          aria-live="polite"
+                        ></div>
+                      </div>
+
+                      <div class="field">
+                        <label
+                          for="patient_phone"
+                          data-i18n="booking.ui.phoneNumber"
+                          >Broj telefona</label
+                        >
+                        <input
+                          id="patient_phone"
+                          name="patient_phone"
+                          type="tel"
+                          autocomplete="tel"
+                          maxlength="40"
+                          placeholder="+381 00 000 0000"
+                          data-i18n-attr="placeholder:booking.ui.phonePlaceholder"
+                          required
+                        />
+                        <div
+                          class="field-error"
+                          data-error-for="patient_phone"
+                          aria-live="polite"
+                        ></div>
+                      </div>
+                    </div>
+
+                    <div class="form-actions">
+                      <button
+                        type="button"
+                        class="button button--outline booking-back"
+                        data-booking-back="2"
+                      >
+                        <span aria-hidden="true">←</span>
+                        <span data-i18n="booking.ui.back">Nazad</span>
+                      </button>
+                      <button
+                        type="submit"
+                        class="button booking-submit"
+                        id="booking-submit"
+                        data-i18n="booking.ui.submitRequest"
+                      >
+                        Pošaljite zahtev za pregled
+                      </button>
+                      <p
+                        class="booking-note"
+                        data-i18n="booking.ui.requestDisclaimer"
+                      >
+                        Ovo je zahtev, a ne potvrđen termin. Naš tim će vas
+                        kontaktirati.
+                      </p>
+                    </div>
+                  </section>
+
+                  <aside
+                    class="booking-summary"
+                    aria-labelledby="booking-summary-title"
+                  >
+                    <div class="summary-topbar">
+                      <div class="summary-icon" aria-hidden="true">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                        >
+                          <path
+                            d="M7 3.8c2.2 0 3.1 1 5 1s2.8-1 5-1c2.6 0 4.2 2.3 3.6 5.2-.6 2.7-1.8 4.3-2.5 7-.6 2.4-1.4 4.5-2.9 4.5-1.7 0-1.2-4.5-3.2-4.5s-1.5 4.5-3.2 4.5c-1.5 0-2.3-2.1-2.9-4.5-.7-2.7-1.9-4.3-2.5-7C3 6.1 4.4 3.8 7 3.8Z"
+                          />
+                        </svg>
+                      </div>
+                      <div>
+                        <p
+                          class="summary-kicker"
+                          data-i18n="booking.ui.summaryKicker"
+                        >
+                          VAŠ PREGLED
+                        </p>
+                        <h2
+                          id="booking-summary-title"
+                          data-i18n="booking.ui.summaryTitle"
+                        >
+                          Pregled zakazivanja
+                        </h2>
+                      </div>
+                    </div>
+
+                    <dl class="summary-list">
+                      <div class="summary-item">
+                        <dt
+                          class="summary-label"
+                          data-i18n="booking.ui.clinicLabel"
+                        >
+                          Ordinacija
+                        </dt>
+                        <dd
+                          data-summary-clinic
+                          data-i18n="booking.ui.chooseClinic"
+                        >
+                          Izaberite ordinaciju
+                        </dd>
+                      </div>
+                      <div class="summary-item">
+                        <dt
+                          class="summary-label"
+                          data-i18n="booking.ui.serviceStep"
+                        >
+                          Usluga
+                        </dt>
+                        <dd data-summary-service>
+                          <span data-i18n="booking.ui.chooseService"
+                            >Izaberite uslugu</span
+                          >
+                        </dd>
+                      </div>
+                      <div class="summary-item">
+                        <dt
+                          class="summary-label"
+                          data-i18n="booking.ui.duration"
+                        >
+                          Trajanje
+                        </dt>
+                        <dd data-summary-duration>—</dd>
+                      </div>
+                      <div class="summary-item">
+                        <dt class="summary-label" data-i18n="booking.ui.date">
+                          Datum
+                        </dt>
+                        <dd data-summary-date>
+                          <span data-i18n="booking.chooseDate"
+                            >Izaberite datum</span
+                          >
+                        </dd>
+                      </div>
+                      <div class="summary-item">
+                        <dt class="summary-label" data-i18n="booking.ui.time">
+                          Termin
+                        </dt>
+                        <dd data-summary-time>
+                          <span data-i18n="booking.chooseTime"
+                            >Izaberite vreme</span
+                          >
+                        </dd>
+                      </div>
+                    </dl>
+
+                    <p
+                      class="summary-message"
+                      data-i18n="booking.ui.confirmedAfterReview"
+                    >
+                      Termin je potvrđen tek nakon što ordinacija pregleda vaš
+                      zahtev.
+                    </p>
+                    <div class="summary-contact">
+                      <span
+                        class="summary-contact__label"
+                        data-i18n="booking.ui.questionsHelp"
+                        >Imate pitanja? Rado ćemo vam pomoći.</span
+                      >
+                      <a data-clinic-phone href="tel:+381115550123"
+                        >+381 11 555 0123</a
+                      >
+                      <a
+                        data-clinic-email
+                        href="mailto:hello@smilecraft.example"
+                        >hello@smilecraft.example</a
+                      >
+                    </div>
+                  </aside>
+                </div>
+              </div>
+
+              <p
+                id="booking-status"
+                class="status-inline"
+                aria-live="polite"
+              ></p>
+              <div
+                id="booking-success"
+                class="status-panel status-panel--success"
+                role="status"
+                aria-live="polite"
+                hidden
+              ></div>
+              <div
+                id="booking-error"
+                class="status-panel status-panel--error"
+                role="alert"
+                aria-live="assertive"
+                hidden
+              ></div>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="index.html"
+            ><span class="brand-mark" aria-hidden="true"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+              >
+                <path
+                  d="M7 3.8c2.2 0 3.1 1 5 1s2.8-1 5-1c2.6 0 4.2 2.3 3.6 5.2-.6 2.7-1.8 4.3-2.5 7-.6 2.4-1.4 4.5-2.9 4.5-1.7 0-1.2-4.5-3.2-4.5s-1.5 4.5-3.2 4.5c-1.5 0-2.3-2.1-2.9-4.5-.7-2.7-1.9-4.3-2.5-7C3 6.1 4.4 3.8 7 3.8Z"
+                /></svg></span
+            ><span data-clinic-name>SmileCraft Dental</span></a
+          >
+          <p>
+            <span data-i18n="site.copy.footerDescription"
+              >Izmišljeni koncept ordinacije za portfolio demonstraciju.
+              Fotografije, profili tima i izjave pacijenata služe samo kao
+              ilustracija.</span
+            >
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/" aria-label="Instagram"
+              >Instagram</a
+            ><a
+              href="https://www.facebook.com/"
+              aria-label="Facebook"
+              data-i18n-attr="aria-label:site.copy.facebook"
+              >f</a
+            ><a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h2><span data-i18n="site.copy.footerExplore">Istražite</span></h2>
+          <ul class="footer-links">
+            <li>
+              <a href="index.html"
+                ><span data-i18n="site.nav.home">Početna</span></a
+              >
+            </li>
+            <li>
+              <a href="services.html"
+                ><span data-i18n="site.nav.services">Usluge</span></a
+              >
+            </li>
+            <li>
+              <a href="about.html"
+                ><span data-i18n="site.nav.about">O nama</span></a
+              >
+            </li>
+            <li>
+              <a href="contact.html"
+                ><span data-i18n="site.nav.contact">Kontakt</span></a
+              >
+            </li>
+            <li>
+              <a href="booking.html"
+                ><span data-i18n="site.nav.booking">Zakažite pregled</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h2><span data-i18n="site.copy.footerCare">Naša nega</span></h2>
+          <ul class="footer-links">
+            <li>
+              <a href="services.html"
+                ><span data-i18n="booking.serviceNames.generalDentistry"
+                  >Opšta stomatologija</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="services.html"
+                ><span data-i18n="booking.serviceNames.dentalCrowns"
+                  >Zubne krunice</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="services.html"
+                ><span data-i18n="booking.serviceNames.dentalImplants"
+                  >Zubni implanti</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="services.html"
+                ><span data-i18n="booking.serviceNames.orthodontics"
+                  >Ortodoncija</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h2>
+            <span data-i18n="site.copy.footerContact">Kontaktirajte nas</span>
+          </h2>
+          <ul class="footer-links">
+            <li>
+              <a data-clinic-phone href="tel:+381115550123">+381 11 555 0123</a>
+            </li>
+            <li>
+              <a data-clinic-email href="mailto:hello@smilecraft.example"
+                >hello@smilecraft.example</a
+              >
+            </li>
+            <li>
+              <span data-clinic-address
+                >Bulevar Dental 25, Beograd, Srbija</span
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          © <span data-current-year>2026</span>
+          <span data-clinic-name>SmileCraft Dental</span
+          ><span data-i18n="site.copy.allRightsReserved"
+            >. Sva prava zadržana.</span
+          >
+        </p>
+        <p>
+          <span data-i18n="site.copy.footerDisclaimer"
+            >Izmišljeni koncept ordinacije — samo portfolio demonstracija.</span
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+.env
+.env.*
+!.env.example
+/vendor/
+/composer.phar
+/error_log

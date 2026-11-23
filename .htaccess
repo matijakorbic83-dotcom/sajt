@@ -1,0 +1,15 @@
+Options -Indexes
+
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "^(?:composer\.(?:json|lock))$">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(?:database|vendor)/ - [F,END]
+    RewriteRule ^backend/(?:db|environment|admin_auth|auth|schedule|appointment_mailer|init_admin|test-db)\.php$ - [F,END]
+</IfModule>

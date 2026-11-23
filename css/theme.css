@@ -1,0 +1,798 @@
+:root {
+  color-scheme: light;
+  --background: #FFFFFF;
+  --surface: #F5F9FC;
+  --card: #FFFFFF;
+  --text: #172B3A;
+  --text-muted: #647789;
+  --primary: #2D8FCB;
+  --secondary: #65B7E8;
+  --primary-hover: #2378AD;
+  --primary-soft: #EAF6FD;
+  --border: #E3EBF1;
+  --input-background: #FFFFFF;
+  --shadow: 0 18px 48px rgb(23 43 58 / 8%);
+  --color-page: var(--background);
+  --color-paper: var(--background);
+  --color-card: var(--card);
+  --color-bg-soft: var(--surface);
+  --color-brand: var(--clinic-brand, var(--primary));
+  --color-brand-dark: var(--primary-hover);
+  --color-brand-soft: var(--clinic-brand-soft, var(--primary-soft));
+  --color-ink: var(--text);
+  --color-muted: var(--text-muted);
+  --color-line: var(--border);
+  --color-white: #FFFFFF;
+  --color-warm: var(--surface);
+  --shadow-soft: var(--shadow);
+}
+
+[data-theme="light"] .card,
+[data-theme="light"] .dialog {
+  background: var(--card);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #101820;
+  --surface: #17232D;
+  --card: #1D2B36;
+  --text: #F2F7FA;
+  --text-muted: #A9BBC8;
+  --primary: #55B6EA;
+  --secondary: #83CCF2;
+  --primary-hover: #83CCF2;
+  --primary-soft: #203A4A;
+  --border: #30414E;
+  --input-background: #17232D;
+  --shadow: 0 18px 48px rgb(0 0 0 / 18%);
+  --color-white: var(--card);
+  --color-brand: var(--primary);
+  --color-brand-dark: var(--primary-hover);
+  --color-brand-soft: var(--primary-soft);
+  --ink: var(--text);
+  --muted: var(--text-muted);
+  --line: var(--border);
+  --canvas: var(--background);
+  --brand: var(--primary);
+  --brand-dark: var(--primary-hover);
+  --brand-soft: var(--primary-soft);
+  --bg: var(--background);
+  --danger-bg: #3A2529;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  color: var(--text);
+  background: var(--background);
+}
+
+html.theme-transition body,
+html.theme-transition body * {
+  transition-property: background-color, border-color, color, box-shadow;
+  transition-duration: 220ms;
+  transition-timing-function: ease;
+}
+
+.site-header {
+  border-bottom-color: var(--border);
+  background: color-mix(in srgb, var(--background) 94%, transparent);
+}
+
+[data-theme="dark"] .site-header {
+  background: var(--surface);
+}
+
+[data-theme="dark"] .menu-toggle {
+  border-color: var(--border);
+  background: var(--card);
+  color: var(--text);
+}
+
+.hero,
+.page-hero {
+  background: radial-gradient(ellipse at 8% 8%, color-mix(in srgb, var(--primary-soft) 82%, transparent), transparent 44%), var(--background);
+}
+
+.booking-page {
+  --vama-text: var(--text);
+  --color-page: var(--background);
+  --color-paper: var(--background);
+  --color-card: var(--card);
+  --color-bg-soft: var(--surface);
+  --color-brand: var(--primary);
+  --color-brand-dark: var(--primary-hover);
+  --color-brand-soft: var(--primary-soft);
+  --color-ink: var(--text);
+  --color-muted: var(--text-muted);
+  --color-line: var(--border);
+  --color-white: var(--card);
+  --color-warm: var(--surface);
+  color: var(--text);
+  background: var(--background);
+}
+
+.booking-page .site-header {
+  background: color-mix(in srgb, var(--background) 94%, transparent);
+}
+
+.booking-page .booking-hero {
+  border-bottom-color: var(--border);
+  background: linear-gradient(180deg, var(--surface), var(--background));
+}
+
+.booking-page .booking-demo-note,
+.booking-page .booking-steps li,
+.booking-page .booking-step__number,
+.booking-page .booking-steps li > span {
+  border-color: var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
+}
+
+.booking-page .booking-steps li[aria-current="step"],
+.booking-page .booking-steps li.is-complete {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+  color: var(--text);
+}
+
+.booking-page .booking-card,
+.booking-page .booking-summary,
+.booking-page .booking-calendar,
+.booking-page .summary-item {
+  border-color: var(--border);
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.booking-page .booking-calendar {
+  background: linear-gradient(145deg, var(--card), var(--surface));
+}
+
+.booking-page .field input,
+.booking-page .field select,
+.booking-page .field textarea,
+.booking-page .calendar-nav,
+.booking-page .time-slot {
+  border-color: var(--border);
+  background-color: var(--input-background);
+  color: var(--text);
+}
+
+.booking-page .field input::placeholder,
+.booking-page .field textarea::placeholder {
+  color: var(--text-muted);
+  opacity: 1;
+}
+
+.booking-page .field input:disabled,
+.booking-page .field select:disabled,
+.booking-page .field textarea:disabled {
+  background: var(--surface);
+  color: var(--text-muted);
+}
+
+.booking-page #booking-submit,
+.booking-page .booking-submit {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #081E2D;
+}
+
+.booking-page #booking-submit:hover:not(:disabled),
+.booking-page .booking-submit:hover:not(:disabled) {
+  border-color: var(--primary-hover);
+  background: var(--primary-hover);
+  color: #081E2D;
+}
+
+.booking-page #booking-submit:disabled,
+.booking-page .booking-submit:disabled {
+  opacity: 0.62;
+}
+
+.booking-page .calendar-day.is-available {
+  border-color: color-mix(in srgb, var(--primary) 36%, transparent);
+  background: color-mix(in srgb, var(--primary) 14%, var(--card));
+}
+
+.booking-page .calendar-day.is-unavailable,
+.booking-page .calendar-day:disabled {
+  color: var(--text-muted);
+  opacity: 0.62;
+}
+
+.booking-page .legend-dot {
+  background: var(--surface);
+}
+
+.booking-page .status-panel--success {
+  border-color: #347b62;
+  background: #19382f;
+  color: #b7ead2;
+}
+
+.booking-page .status-panel--error {
+  border-color: #8d4a50;
+  background: #3a2529;
+  color: #ffd1d4;
+}
+
+.booking-page .calendar-status[data-type="success"],
+.booking-page .status-inline[data-type="success"] {
+  color: #54bd91;
+}
+
+.booking-page .calendar-status[data-type="warning"],
+.booking-page .status-inline[data-type="warning"] {
+  color: #f0c66f;
+}
+
+.booking-page .calendar-status[data-type="error"],
+.booking-page .status-inline[data-type="error"],
+.booking-page .field-error {
+  color: #ff9a9f;
+}
+
+.service-card,
+.service-detail,
+.testimonial,
+.booking-panel,
+.booking-option,
+.image-note {
+  border-color: var(--border);
+  background-color: var(--card);
+}
+
+.service-card:hover {
+  background: var(--surface);
+}
+
+.team-section,
+.site-footer {
+  background: var(--surface);
+}
+
+.contact-map {
+  background: linear-gradient(140deg, var(--primary-soft), var(--surface));
+}
+
+.button,
+.menu-toggle,
+.calendar-nav,
+.time-slot,
+input,
+select,
+textarea {
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.button:focus-visible,
+.menu-toggle:focus-visible,
+.theme-toggle:focus-visible,
+.calendar-nav:focus-visible,
+.calendar-day:focus-visible,
+.time-slot:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  width: auto;
+  min-height: 2.7rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.55rem 0.8rem;
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  background: var(--card);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+  color: var(--text);
+}
+
+.theme-toggle svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.site-nav .theme-toggle {
+  flex: 0 0 auto;
+}
+
+.language-picker__trigger,
+.language-picker__menu {
+  border-color: var(--border);
+  background: var(--card);
+  color: var(--text);
+}
+
+.language-picker__option {
+  color: var(--text-muted);
+}
+
+.language-picker__option:hover,
+.language-picker__option:focus-visible,
+.language-picker__option[aria-checked="true"] {
+  background: var(--primary-soft);
+  color: var(--text);
+}
+
+[data-theme="dark"] .hero,
+[data-theme="dark"] .page-hero {
+  background: radial-gradient(ellipse at 8% 8%, rgb(85 182 234 / 10%), transparent 48%), var(--background);
+}
+
+[data-theme="dark"] .why-section {
+  background: var(--surface);
+  color: var(--text);
+}
+
+[data-theme="dark"] .why-section .eyebrow,
+[data-theme="dark"] .why-section .lead,
+[data-theme="dark"] .benefit p {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .why-section .benefit-icon {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+[data-theme="dark"] .cta-band {
+  background: #1c6792;
+}
+
+[data-theme="dark"] .cta-band .button--light {
+  background: #F2F7FA;
+  color: #172B3A;
+}
+
+[data-theme="dark"] .booking-page .booking-hero {
+  background: linear-gradient(180deg, var(--surface), var(--background));
+}
+
+[data-theme="dark"] .booking-page .booking-app,
+[data-theme="dark"] .booking-page main,
+[data-theme="dark"] .booking-page main > section,
+[data-theme="dark"] .booking-page .booking-section {
+  background-color: var(--background);
+}
+
+[data-theme="dark"] .booking-page .booking-app {
+  box-shadow: 0 18px 56px rgb(0 0 0 / 18%);
+}
+
+[data-theme="dark"] .booking-page .menu-toggle {
+  border-color: var(--border);
+  background: var(--card);
+  color: var(--primary);
+}
+
+[data-theme="dark"] .booking-page .booking-demo-note,
+[data-theme="dark"] .booking-page .booking-steps li,
+[data-theme="dark"] .booking-page .booking-step__number,
+[data-theme="dark"] .booking-page .booking-steps li > span {
+  border-color: var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .booking-page .booking-steps li[aria-current="step"],
+[data-theme="dark"] .booking-page .booking-steps li.is-complete {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+  color: var(--text);
+}
+
+[data-theme="dark"] .booking-page .booking-card,
+[data-theme="dark"] .booking-page .booking-summary,
+[data-theme="dark"] .booking-page .booking-calendar,
+[data-theme="dark"] .booking-page .summary-item,
+[data-theme="dark"] .booking-page .field input,
+[data-theme="dark"] .booking-page .field select,
+[data-theme="dark"] .booking-page .field textarea,
+[data-theme="dark"] .booking-page .calendar-nav,
+[data-theme="dark"] .booking-page .time-slot {
+  border-color: var(--border);
+  background: var(--card);
+  color: var(--text);
+  box-shadow: none;
+}
+
+[data-theme="dark"] .booking-page .booking-calendar {
+  background: linear-gradient(145deg, var(--card), var(--surface));
+}
+
+[data-theme="dark"] .booking-page .field input:disabled,
+[data-theme="dark"] .booking-page .field select:disabled,
+[data-theme="dark"] .booking-page .field textarea:disabled,
+[data-theme="dark"] .booking-page .calendar-day.is-available {
+  background: var(--surface);
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .booking-page .calendar-day.is-available {
+  color: var(--primary);
+}
+
+[data-theme="dark"] .booking-page .calendar-day.is-selected,
+[data-theme="dark"] .booking-page .time-slot.is-selected {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #10232D;
+}
+
+[data-theme="dark"] .booking-page #booking-submit,
+[data-theme="dark"] .booking-page .booking-submit {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #10232D;
+}
+
+[data-theme="dark"] .booking-page #booking-submit:hover:not(:disabled),
+[data-theme="dark"] .booking-page .booking-submit:hover:not(:disabled) {
+  border-color: var(--primary-hover);
+  background: var(--primary-hover);
+  color: #10232D;
+}
+
+[data-theme="dark"] .booking-page .status-panel--success {
+  border-color: #347b62;
+  background: #19382f;
+  color: #b7ead2;
+}
+
+[data-theme="dark"] .booking-page .status-panel--error {
+  border-color: #8d4a50;
+  background: #3a2529;
+  color: #ffd1d4;
+}
+
+[data-theme="dark"] .booking-page .calendar-status[data-type="success"],
+[data-theme="dark"] .booking-page .status-inline[data-type="success"] {
+  color: #54bd91;
+}
+
+[data-theme="dark"] .booking-page .calendar-status[data-type="warning"],
+[data-theme="dark"] .booking-page .status-inline[data-type="warning"] {
+  color: #f0c66f;
+}
+
+[data-theme="dark"] .booking-page .calendar-status[data-type="error"],
+[data-theme="dark"] .booking-page .status-inline[data-type="error"],
+[data-theme="dark"] .booking-page .field-error {
+  color: #ff9a9f;
+}
+
+[data-theme="dark"] .service-card,
+[data-theme="dark"] .service-detail,
+[data-theme="dark"] .testimonial,
+[data-theme="dark"] .booking-panel,
+[data-theme="dark"] .booking-option,
+[data-theme="dark"] .image-note {
+  border-color: var(--border);
+  background: var(--card);
+}
+
+[data-theme="dark"] .service-card:hover,
+[data-theme="dark"] .team-section,
+[data-theme="dark"] .site-footer {
+  background: var(--surface);
+}
+
+[data-theme="dark"] .contact-map {
+  background: linear-gradient(140deg, #1d3441, var(--surface));
+}
+
+[data-theme="dark"] .booking-page .button:not(:disabled) {
+  color: #10232D;
+}
+
+[data-theme="dark"] .booking-page .button--outline {
+  color: var(--text);
+}
+
+[data-theme="dark"] .site-nav .theme-toggle {
+  background: var(--card);
+}
+
+[data-theme="dark"] .language-picker__flag {
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .app-header {
+  background: var(--card);
+  border-bottom-color: var(--border);
+}
+
+[data-theme="dark"] .sidebar {
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .sidebar-note,
+[data-theme="dark"] .card,
+[data-theme="dark"] .dialog {
+  background: var(--card);
+  border-color: var(--border);
+  color: var(--text);
+  box-shadow: none;
+}
+
+[data-theme="dark"] .nav-item {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .nav-item:hover,
+[data-theme="dark"] .dialog-close {
+  background: var(--surface);
+  color: var(--text);
+}
+
+[data-theme="dark"] .nav-item[aria-current="page"] {
+  background: var(--primary-soft);
+  color: var(--primary-hover);
+}
+
+[data-theme="dark"] .side-label,
+[data-theme="dark"] label {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea,
+[data-theme="dark"] .language-control select {
+  border-color: var(--border);
+  background: var(--input-background);
+  color: var(--text);
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: var(--text-muted);
+  opacity: 1;
+}
+
+[data-theme="dark"] input:disabled,
+[data-theme="dark"] select:disabled,
+[data-theme="dark"] textarea:disabled {
+  background: var(--surface);
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .button {
+  border-color: var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+
+[data-theme="dark"] .button:hover {
+  background: #223541;
+}
+
+[data-theme="dark"] .button.primary {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #10232D;
+}
+
+[data-theme="dark"] .button.primary:hover {
+  background: var(--primary-hover);
+}
+
+[data-theme="dark"] .button.subtle {
+  border-color: var(--border);
+  background: var(--primary-soft);
+  color: var(--primary-hover);
+}
+
+[data-theme="dark"] th {
+  background: #1a2832;
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] th,
+[data-theme="dark"] td,
+[data-theme="dark"] .mini-row {
+  border-color: var(--border);
+}
+
+[data-theme="dark"] tbody tr:hover,
+[data-theme="dark"] .mini-row {
+  background: var(--surface);
+}
+
+[data-theme="dark"] .notice {
+  border-color: #315568;
+  background: #1a3341;
+  color: #c4deeb;
+}
+
+[data-theme="dark"] .flash {
+  background: #19382f;
+  color: #b7ead2;
+}
+
+[data-theme="dark"] .flash.error {
+  background: #3a2529;
+  color: #ffd1d4;
+}
+
+[data-theme="dark"] .pill.pending {
+  background: #493a20;
+  color: #f3d28a;
+}
+
+[data-theme="dark"] .pill.confirmed,
+[data-theme="dark"] .pill.published,
+[data-theme="dark"] .pill.active {
+  background: #19382f;
+  color: #b7ead2;
+}
+
+[data-theme="dark"] .pill.cancelled,
+[data-theme="dark"] .pill.unpublished,
+[data-theme="dark"] .pill.inactive {
+  background: #3a2529;
+  color: #ffd1d4;
+}
+
+[data-theme="dark"] .dialog::backdrop {
+  background: rgb(4 10 14 / 76%);
+}
+
+[data-theme="dark"] .login-shell,
+[data-theme="dark"] .admin-setup main {
+  border-color: var(--border);
+  background: var(--card);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+
+[data-theme="dark"] body.admin-login,
+[data-theme="dark"] body.admin-setup {
+  background: radial-gradient(ellipse at top, #1a2c39, var(--background) 62%);
+  color: var(--text);
+}
+
+[data-theme="dark"] .login-copy,
+[data-theme="dark"] .helper,
+[data-theme="dark"] .remember-row,
+[data-theme="dark"] .login-shell label,
+[data-theme="dark"] .admin-setup main p {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .login-shell input,
+[data-theme="dark"] .login-shell select,
+[data-theme="dark"] .admin-setup input,
+[data-theme="dark"] .admin-setup select {
+  border-color: var(--border);
+  background: var(--input-background);
+  color: var(--text);
+}
+
+[data-theme="dark"] .password-toggle,
+[data-theme="dark"] .login-shell .language-control select {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--primary-hover);
+}
+
+[data-theme="dark"] .alert.error {
+  border-color: #8d4a50;
+  background: #3a2529;
+  color: #ffd1d4;
+}
+
+[data-theme="dark"] .admin-setup .notice {
+  background: var(--primary-soft);
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .admin-setup .alert {
+  background: #3a2529;
+  color: #ffd1d4;
+}
+
+[data-theme="dark"] .theme-toggle {
+  border-color: var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+
+[data-theme="dark"] .login-shell .button,
+[data-theme="dark"] .login-shell form > button[type="submit"],
+[data-theme="dark"] .admin-setup button:not(.theme-toggle) {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #10232D;
+}
+
+[data-theme="dark"] .password-toggle:hover {
+  background: #223541;
+  color: var(--primary-hover);
+}
+
+[data-theme="dark"] .setup-theme-control {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 860px) {
+  .site-nav .theme-toggle {
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 3.25rem;
+    margin-top: 0.65rem;
+    padding-inline: 0;
+    border: 0;
+    border-top: 1px solid var(--border);
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .site-nav .theme-toggle:hover {
+    background: var(--surface);
+  }
+}
+
+@media (max-width: 540px) {
+  .app-header {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .app-header .brand {
+    flex: 1 1 100%;
+  }
+
+  .app-header .header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .app-header .theme-toggle {
+    min-height: 2.25rem;
+    gap: 0.35rem;
+    padding: 0.35rem 0.55rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.theme-transition body,
+  html.theme-transition body * {
+    transition-duration: 0.01ms;
+  }
+}
