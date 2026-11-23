@@ -60,6 +60,14 @@ and private backend helpers on Apache. For Nginx or another server, configure
 equivalent access restrictions before deployment; application checks do not
 replace web-server access controls.
 
+## GitHub Pages preview
+
+The GitHub Actions workflow publishes the public HTML, CSS, JavaScript,
+locales, and images to `https://matijakorbic83-dotcom.github.io/sajt/`. This is
+a static preview only: GitHub Pages does not execute PHP, so booking requests
+and administrator pages are unavailable there. Use a PHP and MySQL hosting
+provider for a working booking and administrator backend.
+
 Apply the SQL files in `database/migrations/` in date order. The
 `2026_11_14_stabilize_booking_and_admin_auth.sql` migration requires both
 existing schema migrations. It adds clinic scope to administrator accounts,
